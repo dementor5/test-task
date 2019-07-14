@@ -74,10 +74,7 @@ export default {
       return this.filteredItems.length ? this.filteredItems.length - 1 : 0;
     },
     selectedValues() {
-      return this.selectedItems.reduce((acc, it) => {
-        acc.push(it.value);
-        return acc;
-      }, []);
+      return this.selectedItems.map(it => it.value);
     },
   },
   watch: {
